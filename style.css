@@ -1,0 +1,606 @@
+:root {
+  --blu-scuro: #071c3f;
+  --blu: #1457d9;
+  --azzurro: #59b8ff;
+  --bianco: #ffffff;
+  --sfondo: #f3f7ff;
+  --testo: #17233b;
+  --testo-secondario: #4a5872;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  color: var(--testo);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  background-color: var(--sfondo);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Intestazione */
+
+.intestazione {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px max(24px, calc((100% - 1120px) / 2));
+  background-color: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(20, 87, 217, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.logo {
+  flex-shrink: 0;
+  color: var(--blu-scuro);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--blu);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav a {
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--blu);
+}
+
+/* Presentazione principale */
+
+.presentazione {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 70px;
+  width: min(1120px, calc(100% - 48px));
+  min-height: calc(100vh - 77px);
+  margin: auto;
+  padding: 70px 0;
+}
+
+.presentazione::before {
+  position: absolute;
+  z-index: -1;
+  top: 5%;
+  right: -10%;
+  width: 430px;
+  height: 430px;
+  content: "";
+  background: radial-gradient(
+    circle,
+    rgba(89, 184, 255, 0.28),
+    transparent 68%
+  );
+}
+
+.testo-presentazione {
+  max-width: 670px;
+}
+
+.sopratitolo {
+  margin-bottom: 14px;
+  color: var(--blu);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 26px;
+  color: var(--blu-scuro);
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: -4px;
+}
+
+.testo-presentazione > p:not(.sopratitolo) {
+  max-width: 610px;
+  margin-bottom: 34px;
+  color: var(--testo-secondario);
+  font-size: 1.15rem;
+}
+
+.pulsante {
+  display: inline-block;
+  padding: 15px 26px;
+  color: var(--bianco);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--blu), #2879f3);
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(20, 87, 217, 0.25);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pulsante:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 17px 35px rgba(20, 87, 217, 0.32);
+}
+
+.pulsante:focus-visible,
+nav a:focus-visible,
+.logo:focus-visible {
+  outline: 3px solid var(--azzurro);
+  outline-offset: 4px;
+}
+
+/* Copertina */
+
+.contenitore-copertina {
+  width: min(350px, 100%);
+  margin: auto;
+  transform: rotate(2deg);
+  transition: transform 0.3s ease;
+}
+
+.contenitore-copertina:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.contenitore-copertina img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 8px solid var(--bianco);
+  border-radius: 8px;
+  box-shadow: 0 28px 60px rgba(7, 28, 63, 0.35);
+}
+
+/* Sezioni inferiori */
+
+.sezione {
+  width: min(850px, calc(100% - 48px));
+  margin: auto;
+  padding: 100px 0;
+}
+
+.sezione + .sezione {
+  border-top: 1px solid rgba(20, 87, 217, 0.15);
+}
+
+.sezione h2 {
+  margin-bottom: 24px;
+  color: var(--blu-scuro);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.sezione > p:not(.sopratitolo) {
+  color: var(--testo-secondario);
+  font-size: 1.1rem;
+}
+
+/* Sezione libro */
+
+.introduzione-libro {
+  margin-bottom: 30px;
+}
+
+blockquote {
+  margin: 40px 0;
+  padding: 25px 30px;
+  color: var(--blu-scuro);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.5;
+  background-color: var(--bianco);
+  border-left: 5px solid var(--blu);
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 12px 35px rgba(7, 28, 63, 0.08);
+}
+
+.sezione-libro h3 {
+  margin: 35px 0 18px;
+  color: var(--blu-scuro);
+  font-size: 1.35rem;
+}
+
+.destinatari-libro {
+  display: grid;
+  gap: 13px;
+  margin-bottom: 40px;
+  padding-left: 22px;
+  color: var(--testo-secondario);
+  font-size: 1.05rem;
+}
+
+.destinatari-libro li {
+  padding-left: 4px;
+}
+
+.destinatari-libro li::marker {
+  color: var(--blu);
+}
+
+.disponibilita {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 22px 25px;
+  color: var(--bianco);
+  background-color: var(--blu-scuro);
+  border-radius: 12px;
+  box-shadow: 0 14px 35px rgba(7, 28, 63, 0.15);
+}
+
+.disponibilita strong {
+  font-size: 1.1rem;
+}
+
+.disponibilita span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+}
+
+/* Le sezioni rimangono sempre visibili */
+
+.osserva {
+  opacity: 1;
+  transform: none;
+}
+
+/* Parte finale */
+
+footer {
+  padding: 30px 24px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  background-color: var(--blu-scuro);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .presentazione {
+    gap: 40px;
+  }
+
+  .contenitore-copertina {
+    width: min(310px, 100%);
+  }
+}
+
+/* Smartphone */
+
+@media (max-width: 760px) {
+  .intestazione {
+    padding: 15px 18px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+  }
+
+  .presentazione {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    width: min(calc(100% - 36px), 600px);
+    min-height: auto;
+    padding: 65px 0 80px;
+    text-align: center;
+  }
+
+  .presentazione::before {
+    top: 12%;
+    right: -55%;
+    width: 350px;
+    height: 350px;
+  }
+
+  .testo-presentazione {
+    width: 100%;
+  }
+
+  .sopratitolo {
+    font-size: 0.78rem;
+    letter-spacing: 2.5px;
+  }
+
+  h1 {
+    margin-bottom: 24px;
+    font-size: clamp(2.7rem, 12vw, 3.2rem);
+    line-height: 1.02;
+    letter-spacing: -2px;
+  }
+
+  .testo-presentazione > p:not(.sopratitolo) {
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+    font-size: 1.03rem;
+  }
+
+  .pulsante {
+    padding: 14px 24px;
+  }
+
+  .contenitore-copertina {
+    width: min(280px, 84%);
+    transform: rotate(1deg);
+  }
+
+  .contenitore-copertina:hover {
+    transform: rotate(0deg);
+  }
+
+  .sezione {
+    width: min(calc(100% - 40px), 600px);
+    padding: 75px 0;
+  }
+
+  .sezione h2 {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    letter-spacing: -1.5px;
+  }
+
+  .sezione > p:not(.sopratitolo) {
+    font-size: 1.02rem;
+  }
+
+  blockquote {
+    margin: 32px 0;
+    padding: 22px 20px;
+    font-size: 1.08rem;
+  }
+
+  .sezione-libro h3 {
+    font-size: 1.2rem;
+  }
+
+  .destinatari-libro {
+    gap: 12px;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .disponibilita {
+    padding: 20px;
+    text-align: left;
+  }
+
+  footer {
+    padding: 26px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smartphone molto piccoli */
+
+@media (max-width: 380px) {
+  .intestazione {
+    padding: 14px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.75rem;
+  }
+
+  h1 {
+    font-size: 2.55rem;
+  }
+
+  .presentazione {
+    width: calc(100% - 30px);
+  }
+
+  .sezione {
+    width: calc(100% - 32px);
+  }
+}
+
+/* Accessibilità */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+@media (min-width: 761px) and (prefers-reduced-motion: no-preference) {
+  .js .osserva {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .js .osserva.visibile {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Colori coordinati con la copertina di OltreSM */
+
+:root {
+  --blu-scuro: #172622;
+  --blu: #b9823b;
+  --azzurro: #e3b86f;
+  --bianco: #ffffff;
+  --sfondo: #f6f2e9;
+  --testo: #1b2825;
+  --testo-secondario: #5b6460;
+}
+
+.intestazione {
+  background-color: rgba(255, 253, 248, 0.94);
+  border-bottom-color: rgba(185, 130, 59, 0.2);
+}
+
+.presentazione::before {
+  background: radial-gradient(
+    circle,
+    rgba(227, 184, 111, 0.3),
+    transparent 68%
+  );
+}
+
+.pulsante {
+  color: var(--blu-scuro);
+  background: linear-gradient(135deg, #c18a43, #e3b86f);
+  box-shadow: 0 12px 30px rgba(185, 130, 59, 0.28);
+}
+
+.pulsante:hover {
+  box-shadow: 0 17px 35px rgba(185, 130, 59, 0.38);
+}
+
+.sezione + .sezione {
+  border-top-color: rgba(185, 130, 59, 0.22);
+}
+
+blockquote {
+  box-shadow: 0 12px 35px rgba(23, 38, 34, 0.1);
+}
+
+.disponibilita {
+  background: linear-gradient(135deg, #172622, #263a34);
+}
+/* Sezione autore */
+
+.sezione-autore {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr);
+  align-items: center;
+  gap: 55px;
+  width: min(950px, calc(100% - 48px));
+}
+
+.testo-autore > p:not(.sopratitolo) {
+  color: var(--testo-secondario);
+  font-size: 1.08rem;
+}
+
+.testo-autore > p + p {
+  margin-top: 20px;
+}
+
+.firma-autore {
+  padding: 38px 30px;
+  color: var(--bianco);
+  text-align: center;
+  background: linear-gradient(145deg, #172622, #2c4039);
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(23, 38, 34, 0.22);
+}
+
+.iniziali-autore {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--azzurro);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.firma-autore p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .sezione-autore {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    width: min(calc(100% - 40px), 600px);
+  }
+
+  .testo-autore {
+    text-align: left;
+  }
+
+  .firma-autore {
+    padding: 32px 24px;
+  }
+}
+/* Collegamenti Instagram */
+
+.link-instagram {
+  color: var(--blu);
+}
+
+.instagram-footer {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--azzurro);
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.instagram-footer:hover {
+  color: var(--bianco);
+  text-decoration: underline;
+}
+
+.link-instagram:focus-visible,
+.instagram-footer:focus-visible {
+  outline: 3px solid var(--azzurro);
+  outline-offset: 4px;
+}
