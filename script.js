@@ -1,31 +1,48 @@
-document.addEventListener("DOMContentLoaded", function () {
-  document.documentElement.classList.add("js");
+const pulsanteMenu = document.querySelector(".menu-toggle");
+const menu = document.querySelector("#menu-principale");
 
-  const sezioni = document.querySelectorAll(".osserva");
+if (pulsanteMenu && menu) {
+  pulsanteMenu.addEventListener("click", () => {
+    const aperto = menu.classList.toggle("aperto");
 
-  if (!("IntersectionObserver" in window)) {
-    sezioni.forEach(function (sezione) {
-      sezione.classList.add("visibile");
+    pulsanteMenu.classList.toggle("aperto", aperto);
+    pulsanteMenu.setAttribute("aria-expanded", String(aperto));
+    pulsanteMenu.setAttribute(
+      "aria-label",
+      aperto ? "Chiudi il menu" : "Apri il menu"
+    );
+  });
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("aperto");
+      pulsanteMenu.classList.remove("aperto");
+      pulsanteMenu.setAttribute("aria-expanded", "false");
+      pulsanteMenu.setAttribute("aria-label", "Apri il menu");
     });
+  });
+}
 
-    return;
-  }
+const sezioni = document.querySelectorAll(".osserva");
+
+if ("IntersectionObserver" in window) {
+  document.body.classList.add("animazioni-attive");
 
   const osservatore = new IntersectionObserver(
-    function (elementi) {
-      elementi.forEach(function (elemento) {
+    (elementi, observer) => {
+      elementi.forEach((elemento) => {
         if (elemento.isIntersecting) {
           elemento.target.classList.add("visibile");
-          osservatore.unobserve(elemento.target);
+          observer.unobserve(elemento.target);
         }
       });
     },
     {
-      threshold: 0.15,
-    },
+      threshold: 0.12
+    }
   );
 
-  sezioni.forEach(function (sezione) {
+  sezioni.forEach((sezione) => {
     osservatore.observe(sezione);
   });
-});
+}
