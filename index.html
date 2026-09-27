@@ -4,41 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>OltreSM | Oltre la diagnosi, la persona</title>
+    <title>OltreSM – La vita che gli altri non vedono | Rosario Fortunato</title>
 
     <meta
       name="description"
-      content="OltreSM di Rosario Fortunato è una testimonianza personale sulla sclerosi multipla e sulle malattie invisibili."
+      content="OltreSM – La vita che gli altri non vedono, il libro di Rosario Fortunato: una testimonianza autentica sulla sclerosi multipla, la fatica invisibile e la vita oltre la diagnosi."
     />
 
-    <link rel="canonical" href="https://rosariofortunato.github.io/oltresm/" />
+    <link
+      rel="canonical"
+      href="https://rosariofortunato.github.io/oltresm/"
+    />
 
-    <meta property="og:title" content="OltreSM - Rosario Fortunato" />
+    <meta
+      property="og:title"
+      content="OltreSM – La vita che gli altri non vedono"
+    />
+
     <meta
       property="og:description"
       content="Una storia vera sulla persona che continua a vivere oltre la diagnosi."
     />
+
     <meta
       property="og:image"
       content="https://rosariofortunato.github.io/oltresm/copertina-oltresm.png"
     />
+
     <meta
       property="og:url"
       content="https://rosariofortunato.github.io/oltresm/"
     />
-    <meta property="og:type" content="website" />
+
+    <meta property="og:type" content="book" />
+    <meta name="theme-color" content="#10243e" />
 
     <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "OltreSM – La vita che gli altri non vedono",
+        "author": {
+          "@type": "Person",
+          "name": "Rosario Fortunato"
+        },
+        "inLanguage": "it",
+        "bookFormat": "https://schema.org/Paperback",
+        "offers": {
+          "@type": "Offer",
+          "price": "12.99",
+          "priceCurrency": "EUR",
+          "url": "https://amzn.eu/d/0gkHBU9U",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
   </head>
 
   <body>
     <header class="intestazione">
-      <a class="logo" href="#inizio">Oltre<span>SM</span></a>
+      <a class="logo" href="#inizio" aria-label="Torna all'inizio">
+        Oltre<span>SM</span>
+      </a>
 
-      <nav>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-principale"
+        aria-label="Apri il menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="menu-principale" aria-label="Navigazione principale">
         <a href="#libro">Il libro</a>
+        <a href="#estratto">Estratto</a>
+        <a href="#recensioni">Recensioni</a>
+        <a href="#eventi">Eventi</a>
         <a href="#autore">L’autore</a>
+
         <a
+          class="nav-instagram"
           href="https://www.instagram.com/oltre.sm/"
           target="_blank"
           rel="noopener noreferrer"
@@ -51,97 +102,277 @@
     <main id="inizio">
       <section class="presentazione">
         <div class="testo-presentazione">
-          <p class="sopratitolo">Una storia vera</p>
+          <p class="sopratitolo">Il libro di Rosario Fortunato</p>
 
-          <h1>Oltre la SM c’è la persona.</h1>
+          <h1>Oltre<span>SM</span></h1>
 
-          <p>
-            Un viaggio attraverso la diagnosi, la paura, la fatica invisibile e
-            la forza di continuare a vivere, amare e progettare il futuro.
+          <p class="sottotitolo">La vita che gli altri non vedono</p>
+
+          <p class="testo-hero">
+            Una storia vera sulla diagnosi, sulla paura e sulla fatica
+            invisibile, ma soprattutto sulla persona che continua a vivere,
+            amare e progettare il futuro.
           </p>
 
-          <a
-            class="pulsante"
-            href="https://amzn.eu/d/0gkHBU9U"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Acquista su Amazon
-          </a>
-        </div>
-
-        <div class="contenitore-copertina">
-          <img
-            src="copertina-oltresm.png"
-            alt="Copertina del libro OltreSM - La vita che gli altri non vedono di Rosario Fortunato"
-          />
-        </div>
-      </section>
-
-      <section class="sezione sezione-libro osserva" id="libro">
-        <p class="sopratitolo">Il libro</p>
-
-        <h2>Una diagnosi non racconta tutta una persona</h2>
-
-        <p class="introduzione-libro">
-          OltreSM racconta cosa significa convivere con una malattia che spesso
-          gli altri non riescono a vedere. È una testimonianza sincera sulla
-          diagnosi, sulla paura, sulla fatica invisibile e sulla forza di
-          continuare a vivere.
-        </p>
-
-        <blockquote>
-          “Non è soltanto un libro sulla malattia. È la storia della persona che
-          continua a vivere oltre la diagnosi.”
-        </blockquote>
-
-        <h3>Un libro dedicato a chi:</h3>
-
-        <ul class="destinatari-libro">
-          <li>convive con una malattia cronica o invisibile;</li>
-          <li>
-            sta accanto a una persona che affronta ogni giorno la malattia;
-          </li>
-          <li>vuole comprendere ciò che spesso non si riesce a spiegare;</li>
-          <li>ha bisogno di ritrovare speranza dopo una diagnosi.</li>
-        </ul>
-
-        <div class="disponibilita">
-          <strong>OltreSM è disponibile su Amazon</strong>
-
-          <span>
-            Acquista la tua copia e scopri la persona che continua a vivere
-            oltre la diagnosi.
-          </span>
-
-          <div>
+          <div class="azioni-hero">
             <a
               class="pulsante"
               href="https://amzn.eu/d/0gkHBU9U"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Acquista il libro
+              Acquista su Amazon – 12,99 €
+            </a>
+
+            <a class="pulsante-secondario" href="#estratto">
+              Leggi un estratto
             </a>
           </div>
+
+          <p class="nota-formato">
+            Edizione cartacea disponibile su Amazon
+          </p>
+        </div>
+
+        <div class="contenitore-copertina">
+          <img
+            src="copertina-oltresm.png"
+            alt="Copertina del libro OltreSM – La vita che gli altri non vedono di Rosario Fortunato"
+          />
         </div>
       </section>
 
-      <section class="sezione osserva" id="autore">
-        <p class="sopratitolo">L’autore</p>
+      <section class="sezione sezione-libro osserva" id="libro">
+        <div class="titolo-sezione">
+          <p class="sopratitolo">Il libro</p>
 
-        <h2>Rosario Fortunato</h2>
+          <h2>Una diagnosi non racconta tutta una persona</h2>
+        </div>
 
-        <p>
-          Ho scelto di raccontare la mia esperienza perché dietro ogni diagnosi
-          esiste una persona, con sogni, paure, relazioni e progetti ancora da
-          realizzare.
+        <div class="griglia-libro">
+          <div>
+            <p>
+              <strong>OltreSM – La vita che gli altri non vedono</strong>
+              è una testimonianza autobiografica sulla sclerosi multipla e su
+              tutto ciò che una malattia invisibile porta con sé: la paura, la
+              fatica, il lavoro, la coppia, i desideri e il bisogno di essere
+              compresi senza essere compatiti.
+            </p>
+
+            <p>
+              Rosario Fortunato racconta il percorso dai primi sintomi alla
+              diagnosi, fino alla ricerca di un nuovo equilibrio. Non una storia
+              di perfezione o di eroismo, ma di vita vera.
+            </p>
+          </div>
+
+          <blockquote>
+            <p>“La malattia non definisce chi siamo.”</p>
+            <cite>— OltreSM</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="sezione sezione-chiara osserva" id="motivi">
+        <div class="titolo-sezione centrato">
+          <p class="sopratitolo">Perché leggerlo</p>
+
+          <h2>Un libro per riconoscersi e comprendere</h2>
+        </div>
+
+        <div class="griglia-motivi">
+          <article class="scheda-motivo">
+            <span class="numero">01</span>
+
+            <h3>Una storia autentica</h3>
+
+            <p>
+              Un racconto sincero, senza filtri, nato da un’esperienza realmente
+              vissuta.
+            </p>
+          </article>
+
+          <article class="scheda-motivo">
+            <span class="numero">02</span>
+
+            <h3>Le difficoltà invisibili</h3>
+
+            <p>
+              Per dare parole alla stanchezza, alla paura e ai sintomi che gli
+              altri spesso non vedono.
+            </p>
+          </article>
+
+          <article class="scheda-motivo">
+            <span class="numero">03</span>
+
+            <h3>Oltre la diagnosi</h3>
+
+            <p>
+              Per ricordare che sogni, relazioni e progetti continuano a
+              esistere anche dopo una diagnosi.
+            </p>
+          </article>
+        </div>
+
+        <p class="destinatari">
+          Per chi convive con una malattia cronica o invisibile, per chi gli sta
+          accanto e per chi desidera capire davvero.
         </p>
+      </section>
+
+      <section class="sezione sezione-estratto osserva" id="estratto">
+        <div class="titolo-sezione">
+          <p class="sopratitolo">
+            Dal capitolo “La fatica che nessuno vede”
+          </p>
+
+          <h2>Leggi un estratto</h2>
+        </div>
+
+        <div class="estratto">
+          <p>
+            «Come stai?» Sono soltanto due parole. Quasi sempre vengono
+            pronunciate con affetto, cortesia o sincera preoccupazione. Eppure,
+            da quando ho la sclerosi multipla, questa domanda mi mette in
+            difficoltà. Mi dà persino fastidio.
+          </p>
+
+          <p>
+            Non perché non apprezzi l’interesse degli altri, ma perché spesso
+            non so cosa rispondere. La risposta vera sarebbe troppo lunga.
+            Dovrei spiegare come mi sento in quel preciso momento, quanto ho
+            dormito, quanto mi fanno male le gambe, quanta energia ho già
+            consumato e quanta me ne rimane.
+          </p>
+
+          <p>
+            Dovrei descrivere qualcosa che, a volte, non riesco a comprendere
+            completamente neppure io.
+          </p>
+        </div>
+      </section>
+
+      <section class="sezione sezione-chiara osserva" id="recensioni">
+        <div class="titolo-sezione centrato">
+          <p class="sopratitolo">Le parole dei lettori</p>
+
+          <h2>Recensioni</h2>
+        </div>
+
+        <article class="stato-vuoto">
+          <div
+            class="stelle"
+            aria-label="Recensione di cinque stelle su cinque"
+          >
+            ★★★★★
+          </div>
+
+          <h3>“Stupendo”</h3>
+
+          <p>
+            “Un libro straordinariamente toccante e profondo.
+            <strong>OltreSM – La vita che gli altri non vedono</strong>
+            di Rosario Fortunato ti cattura fin dalla prima pagina e lascia un
+            segno indelebile nel cuore. Consigliatissimo a chiunque cerchi una
+            lettura emozionante e ricca di significato.”
+          </p>
+
+          <p>
+            <strong>Cliente Amazon</strong><br />
+            <small>Acquisto verificato · 23 settembre 2026</small>
+          </p>
+        </article>
+      </section>
+
+      <section class="sezione osserva" id="eventi">
+        <div class="titolo-sezione centrato">
+          <p class="sopratitolo">Incontriamoci</p>
+
+          <h2>Presentazioni ed eventi</h2>
+        </div>
+
+        <div class="stato-vuoto evento-vuoto">
+          <span class="icona-calendario" aria-hidden="true">○</span>
+
+          <h3>Nuove presentazioni in programma</h3>
+
+          <p>
+            Le prossime date saranno pubblicate qui e sul profilo Instagram
+            <strong>@oltre.sm</strong>.
+          </p>
+        </div>
+      </section>
+
+      <section class="sezione sezione-autore osserva" id="autore">
+        <div class="titolo-sezione">
+          <p class="sopratitolo">L’autore</p>
+
+          <h2>Rosario Fortunato</h2>
+        </div>
+
+        <div class="testo-autore">
+          <p>
+            Rosario Fortunato vive a Palermo. Dopo la diagnosi di sclerosi
+            multipla ha scelto di trasformare la propria esperienza in una voce
+            capace di raccontare ciò che spesso rimane invisibile.
+          </p>
+
+          <p>
+            Con <strong>OltreSM</strong> vuole ricordare che dietro ogni diagnosi
+            esiste una persona, con sogni, paure, relazioni e progetti ancora da
+            realizzare. Il suo messaggio è semplice: oltre la malattia c’è
+            sempre la persona.
+          </p>
+
+          <a
+            class="link-instagram"
+            href="https://www.instagram.com/oltre.sm/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Segui @oltre.sm su Instagram →
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="invito-finale osserva"
+        aria-labelledby="titolo-acquisto"
+      >
+        <p class="sopratitolo">Disponibile ora</p>
+
+        <h2 id="titolo-acquisto">
+          Scopri la vita che gli altri non vedono
+        </h2>
+
+        <p>Acquista l’edizione cartacea di OltreSM su Amazon.</p>
+
+        <a
+          class="pulsante pulsante-chiaro"
+          href="https://amzn.eu/d/0gkHBU9U"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Acquista su Amazon – 12,99 €
+        </a>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 OltreSM — Tutti i diritti riservati</p>
+      <a class="logo logo-footer" href="#inizio">
+        Oltre<span>SM</span>
+      </a>
+
+      <p>© 2026 Rosario Fortunato — Tutti i diritti riservati</p>
+
+      <a
+        href="https://www.instagram.com/oltre.sm/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram @oltre.sm
+      </a>
     </footer>
 
     <script src="script.js"></script>
