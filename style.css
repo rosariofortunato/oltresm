@@ -432,6 +432,101 @@ blockquote cite {
   letter-spacing: 0.15em;
 }
 
+.carosello-recensioni {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 52px;
+  align-items: center;
+  gap: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.finestra-recensioni {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--raggio);
+  touch-action: pan-y;
+}
+
+.griglia-recensioni {
+  display: flex;
+  align-items: stretch;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.griglia-recensioni .recensione-slide {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.griglia-recensioni .recensione-slide p:last-child {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.freccia-recensioni {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  place-items: center;
+  color: var(--bianco);
+  font-family: Arial, sans-serif;
+  font-size: 2.2rem;
+  line-height: 1;
+  background: var(--blu);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 10px 24px rgba(16, 36, 62, 0.18);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.freccia-recensioni:hover,
+.freccia-recensioni:focus-visible {
+  background: var(--arancio-scuro);
+  transform: scale(1.06);
+}
+
+.freccia-recensioni:focus-visible,
+.indicatore-recensione:focus-visible {
+  outline: 3px solid rgba(233, 121, 69, 0.42);
+  outline-offset: 3px;
+}
+
+.indicatori-recensioni {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.indicatore-recensione {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  background: #c8c1b7;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    width 0.2s ease,
+    background 0.2s ease;
+}
+
+.indicatore-recensione.attivo {
+  width: 30px;
+  background: var(--arancio);
+  border-radius: 999px;
+}
+
 .evento-vuoto {
   background: var(--crema);
 }
@@ -629,6 +724,11 @@ footer a {
     max-width: 600px;
     margin: 0 auto;
   }
+
+  .griglia-recensioni .recensione-slide {
+    max-width: none;
+    margin: 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -664,6 +764,21 @@ footer a {
     padding: 28px;
   }
 
+  .carosello-recensioni {
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    gap: 8px;
+  }
+
+  .freccia-recensioni {
+    width: 40px;
+    height: 40px;
+    font-size: 1.75rem;
+  }
+
+  .griglia-recensioni .recensione-slide {
+    padding: 25px;
+  }
+
   blockquote p {
     font-size: 1.5rem;
   }
@@ -684,29 +799,5 @@ footer a {
   *::after {
     scroll-behavior: auto !important;
     transition: none !important;
-  }
-}
-.griglia-recensioni {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  align-items: stretch;
-}
-
-.griglia-recensioni .scheda-motivo {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
-
-.griglia-recensioni .scheda-motivo p:last-child {
-  margin-top: auto;
-  padding-top: 24px;
-}
-
-@media (max-width: 900px) {
-  .griglia-recensioni {
-    grid-template-columns: 1fr;
   }
 }
