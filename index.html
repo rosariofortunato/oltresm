@@ -255,88 +255,142 @@
           <h2>Recensioni</h2>
         </div>
 
-        <div class="griglia-recensioni">
-          <article class="scheda-motivo">
-            <div
-              class="stelle"
-              aria-label="Recensione di cinque stelle su cinque"
-            >
-              ★★★★★
+        <div class="carosello-recensioni">
+          <button
+            class="freccia-recensioni precedente"
+            type="button"
+            aria-label="Mostra la recensione precedente"
+          >
+            ‹
+          </button>
+
+          <div
+            class="finestra-recensioni"
+            aria-live="polite"
+            aria-label="Carosello delle recensioni"
+          >
+            <div class="griglia-recensioni">
+              <article class="scheda-motivo recensione-slide">
+                <div
+                  class="stelle"
+                  aria-label="Recensione di cinque stelle su cinque"
+                >
+                  ★★★★★
+                </div>
+
+                <h3>“Stupendo”</h3>
+
+                <p>
+                  “Un libro straordinariamente toccante e profondo.
+                  <strong>OltreSM – La vita che gli altri non vedono</strong>
+                  di Rosario Fortunato ti cattura fin dalla prima pagina e
+                  lascia un segno indelebile nel cuore. Consigliatissimo a
+                  chiunque cerchi una lettura emozionante e ricca di
+                  significato.”
+                </p>
+
+                <p>
+                  <strong>Cliente Amazon</strong><br />
+                  <small>Acquisto verificato · 23 settembre 2026</small>
+                </p>
+              </article>
+
+              <article class="scheda-motivo recensione-slide">
+                <div
+                  class="stelle"
+                  aria-label="Recensione di cinque stelle su cinque"
+                >
+                  ★★★★★
+                </div>
+
+                <h3>“Essenziale ed emozionante”</h3>
+
+                <p>
+                  “È un libro molto emozionante. Ti catapulta in un mondo
+                  sconosciuto e ti insegna a vedere ciò che ad occhio nudo non è
+                  possibile vedere. Ti fa capire che la sofferenza ha varie
+                  forme e che si può scegliere se soccombere ad essa o vivere.
+                  La forza dell’autore e di tante altre persone che come lui
+                  vivono qualcosa di inimmaginabile dovrebbe farci riflettere su
+                  come viviamo la vita e il vero senso che è rinchiusa in essa.”
+                </p>
+
+                <p>
+                  <strong>Rossana</strong><br />
+                  <small>Recensito in Italia il 27 settembre 2026</small>
+                </p>
+              </article>
+
+              <article class="scheda-motivo recensione-slide">
+                <div
+                  class="stelle"
+                  aria-label="Recensione di cinque stelle su cinque"
+                >
+                  ★★★★★
+                </div>
+
+                <h3>“Un'iniezione di coraggio e speranza. Da leggere”</h3>
+
+                <p>
+                  “Conosco l'autore come collega, ma leggere “Oltre SM” mi ha
+                  emozionato e ispirato profondamente.
+                </p>
+
+                <p>
+                  È il racconto autentico e coraggioso di chi scopre di avere la
+                  sclerosi multipla ma sceglie di non farsi definire dalla
+                  malattia. Uno stile diretto, privo di vittimismi e pieno di
+                  forza. Un libro che insegna ad andare oltre le difficoltà,
+                  consigliato non solo a chi vive questa realtà, ma a chiunque
+                  cerchi una grande lezione di resilienza e vita.
+                </p>
+
+                <p>Consigliatissimo!”</p>
+
+                <p>
+                  <strong>Barbara Dimino</strong><br />
+                  <small>Acquisto verificato · 25 settembre 2026</small>
+                </p>
+              </article>
             </div>
+          </div>
 
-            <h3>“Stupendo”</h3>
+          <button
+            class="freccia-recensioni successiva"
+            type="button"
+            aria-label="Mostra la recensione successiva"
+          >
+            ›
+          </button>
+        </div>
 
-            <p>
-              “Un libro straordinariamente toccante e profondo.
-              <strong>OltreSM – La vita che gli altri non vedono</strong>
-              di Rosario Fortunato ti cattura fin dalla prima pagina e lascia un
-              segno indelebile nel cuore. Consigliatissimo a chiunque cerchi una
-              lettura emozionante e ricca di significato.”
-            </p>
+        <div
+          class="indicatori-recensioni"
+          aria-label="Seleziona una recensione"
+        >
+          <button
+            class="indicatore-recensione attivo"
+            type="button"
+            data-indice="0"
+            aria-label="Mostra la recensione 1"
+            aria-current="true"
+          ></button>
 
-            <p>
-              <strong>Cliente Amazon</strong><br />
-              <small>Acquisto verificato · 23 settembre 2026</small>
-            </p>
-          </article>
+          <button
+            class="indicatore-recensione"
+            type="button"
+            data-indice="1"
+            aria-label="Mostra la recensione 2"
+            aria-current="false"
+          ></button>
 
-          <article class="scheda-motivo">
-            <div
-              class="stelle"
-              aria-label="Recensione di cinque stelle su cinque"
-            >
-              ★★★★★
-            </div>
-
-            <h3>“Essenziale ed emozionante”</h3>
-
-            <p>
-              “È un libro molto emozionante. Ti catapulta in un mondo
-              sconosciuto e ti insegna a vedere ciò che ad occhio nudo non è
-              possibile vedere. Ti fa capire che la sofferenza ha varie forme e
-              che si può scegliere se soccombere ad essa o vivere. La forza
-              dell’autore e di tante altre persone che come lui vivono qualcosa
-              di inimmaginabile dovrebbe farci riflettere su come viviamo la
-              vita e il vero senso che è rinchiusa in essa.”
-            </p>
-
-            <p>
-              <strong>Rossana</strong><br />
-              <small>Recensito in Italia il 27 settembre 2026</small>
-            </p>
-          </article>
-
-          <article class="scheda-motivo">
-            <div
-              class="stelle"
-              aria-label="Recensione di cinque stelle su cinque"
-            >
-              ★★★★★
-            </div>
-
-            <h3>“Un'iniezione di coraggio e speranza. Da leggere”</h3>
-
-            <p>
-              “Conosco l'autore come collega, ma leggere "Oltre SM" mi ha
-              emozionato e ispirato profondamente.
-            </p>
-
-            <p>
-              È il racconto autentico e coraggioso di chi scopre di avere la
-              sclerosi multipla ma sceglie di non farsi definire dalla malattia.
-              Uno stile diretto, privo di vittimismi e pieno di forza. Un libro
-              che insegna ad andare oltre le difficoltà, consigliato non solo a
-              chi vive questa realtà, ma a chiunque cerchi una grande lezione di
-              resilienza e vita.
-            </p>
-
-            <p>Consigliatissimo!”</p>
-
-            <p>
-              <strong>Barbara Dimino</strong><br />
-              <small>Acquisto verificato · 25 settembre 2026</small>
-            </p>
-          </article>
+          <button
+            class="indicatore-recensione"
+            type="button"
+            data-indice="2"
+            aria-label="Mostra la recensione 3"
+            aria-current="false"
+          ></button>
         </div>
       </section>
 
